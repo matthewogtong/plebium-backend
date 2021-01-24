@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :user_topics
+  get "/topics", to: "topics#index"
 end

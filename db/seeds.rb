@@ -6,18 +6,36 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-bob = User.create(username: "bob")
+User.delete_all
+Topic.delete_all
+UserTopic.delete_all
+Story.delete_all
+Bookmark.delete_all
+Response.delete_all
 
-software = Topic.create(name: "software")
+User.create(username: "Sara")
+
+
+#TOPIC SEEDS
+
+Topic.create(name: "Arts & Entertainment")
+Topic.create(name: "Culture")
+Topic.create(name: "Equality")
+Topic.create(name: "Health")
+Topic.create(name: "Industry")
+Topic.create(name: "Personal Development")
+Topic.create(name: "Politics")
+Topic.create(name: "Programming")
+Topic.create(name: "Science")
+Topic.create(name: "Self")
+Topic.create(name: "Society")
+Topic.create(name: "Technology")
+
 
 UserTopic.create(user_id: 1, topic_id: 1)
 
-# bookmark
-# story
-# response
+Story.create(title: "hi", user_id: 1, topic_id: 1)
 
-story_1 = Story.create(title: "hi", user_id: bob, topic_id: software)
+Bookmark.create(user_id: 1, story_id: 1)
 
-Bookmark.create(user_id: bob, story_id: story_1)
-
-Response.create(content: "jsdnfkjsdfg", snaps: 3, story_id: story_1)
+Response.create(content: "jsdnfkjsdfg", snaps: 3, story_id: 1)
