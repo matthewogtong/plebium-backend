@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # USER ROUTES
   get "/users", to: "users#index"
   post "/users", to: "users#create"
+  get "/users/:id", to: "users#show"
 
   # STORY ROUTES
   get "/stories", to: "stories#index"
