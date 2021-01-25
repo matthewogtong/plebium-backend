@@ -13,7 +13,7 @@ Story.delete_all
 Bookmark.delete_all
 Response.delete_all
 
-User.create(username: "Sara")
+User.create(username: "Sara", first_name: "Sara", last_name: "Cemal")
 
 
 #TOPIC SEEDS
