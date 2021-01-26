@@ -15,4 +15,8 @@ class StoriesController < ApplicationController
     def story_params
         params.permit(:title, :content, :read_time, :created_at, :user_id, :topic_id)
     end
+
+    def destroy
+        @story = Story.destroy
+    end
 end
