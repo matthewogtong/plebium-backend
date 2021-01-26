@@ -33,6 +33,12 @@ Topic.create(name: "Technology")
 
 
 UserTopic.create(user_id: 1, topic_id: 1)
+UserTopic.create(user_id: 1, topic_id: 2)
+UserTopic.create(user_id: 1, topic_id: 3)
+UserTopic.create(user_id: 1, topic_id: 4)
+UserTopic.create(user_id: 1, topic_id: 5)
+UserTopic.create(user_id: 1, topic_id: 6)
+UserTopic.create(user_id: 1, topic_id: 7)
 
 Story.create(title: "hi", user_id: 1, topic_id: 1)
 
