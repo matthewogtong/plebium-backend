@@ -12,11 +12,6 @@ class StoriesController < ApplicationController
 
     def updatesnaps
         @story = Story.find(params[:id])
-        if @story.snaps == 0 
-            @story.snaps = 1
-        else 
-            @story.snaps += 1
-        end
         render json: @story
     end
 
@@ -34,7 +29,7 @@ class StoriesController < ApplicationController
     private
 
     def story_params
-        params.permit(:title, :content, :read_time, :created_at, :user_id, :topic_id)
+        params.permit(:title, :content, :read_time, :created_at, :user_id, :topic_id, :snaps)
     end
 
     
