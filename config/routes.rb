@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/stories", to: "stories#index"
   get "/stories/:id", to: "stories#show"
   post "/stories", to: "stories#create"
+  patch "/stories/:id", to: "stories#updatesnaps"
   delete "/stories/:id", to: "stories#delete"
 
   # TOPIC ROUTES

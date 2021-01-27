@@ -10,6 +10,16 @@ class StoriesController < ApplicationController
         render json: @story
     end
 
+    def updatesnaps
+        @story = Story.find(params[:id])
+        if @story.snaps == 0 
+            @story.snaps = 1
+        else 
+            @story.snaps += 1
+        end
+        render json: @story
+    end
+
     def create
         @story = Story.create(story_params)
         render json: @story
