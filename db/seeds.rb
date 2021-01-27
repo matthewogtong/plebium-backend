@@ -42,6 +42,8 @@ UserTopic.create(user_id: 1, topic_id: 7)
 
 Story.create(title: "hi", user_id: 1, topic_id: 1)
 
+Story.create(title: "ayeyeye", content: "some content", user_id: 1, topic_id: 1)
+
 Bookmark.create(user_id: 1, story_id: 1)
 
 Response.create(content: "jsdnfkjsdfg", snaps: 3, story_id: 1)

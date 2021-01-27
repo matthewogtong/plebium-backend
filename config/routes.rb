@@ -10,8 +10,9 @@ Rails.application.routes.draw do
 
   # STORY ROUTES
   get "/stories", to: "stories#index"
+  get "/stories/:id", to: "stories#show"
   post "/stories", to: "stories#create"
-  delete "/stories", to: "stories#destroy"
+  delete "/stories/:id", to: "stories#delete"
 
   # TOPIC ROUTES
   get "/topics", to: "topics#index"
