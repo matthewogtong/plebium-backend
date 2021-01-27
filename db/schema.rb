@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_235343) do
+ActiveRecord::Schema.define(version: 2021_01_27_173328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_235343) do
   create_table "stories", force: :cascade do |t|
     t.text "title"
     t.text "content"
-    t.integer "snaps"
+    t.integer "snaps", default: 0
     t.integer "read_time"
     t.date "date_created"
     t.bigint "user_id", null: false

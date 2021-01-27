@@ -12,6 +12,8 @@ class StoriesController < ApplicationController
 
     def updatesnaps
         @story = Story.find(params[:id])
+        @story.snaps += 1
+        @story.save
         render json: @story
     end
 
