@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/users", to: "users#index"
   post "/users", to: "users#create"
   get "/users/:id", to: "users#show"
+  get "/users/:id/bookmarks", to: "users#bookmarks"
+  post "/users/:id/bookmarks", to: "users#new_bookmark"
 
   # STORY ROUTES
   get "/stories", to: "stories#index"
@@ -21,7 +23,9 @@ Rails.application.routes.draw do
   # RESPONSE ROUTES
   get "/responses", to: "responses#index"
   post "/responses", to: "responses#create"
-  
+
+  # BOOKMARK ROUTES
+  delete "/bookmarks/:id", to: "bookmarks#delete"
   
 
   
